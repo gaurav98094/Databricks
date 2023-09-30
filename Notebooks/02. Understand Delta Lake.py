@@ -88,8 +88,4 @@
 # COMMAND ----------
 
 # MAGIC %sql
-# MAGIC drop table employees
-
-# COMMAND ----------
-
-
+# MAGIC -- drop table employees
