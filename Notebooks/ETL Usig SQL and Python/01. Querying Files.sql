@@ -12,6 +12,16 @@ select * from json.`dbfs:/mnt/demo/external_default/_delta_log/*.json`
 
 -- COMMAND ----------
 
+SELECT *,
+    input_file_name() source_file
+  from json.`dbfs:/mnt/demo/external_default/_delta_log/*.json`
+
+-- COMMAND ----------
+
+
+
+-- COMMAND ----------
+
 CREATE TEMP VIEW books_tmp_vw
    (book_id STRING, title STRING, author STRING, category STRING, price DOUBLE)
 USING CSV
